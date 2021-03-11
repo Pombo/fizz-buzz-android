@@ -6,4 +6,4 @@ DashboardFragment displays all fizz-buzz requests. They are ordered by descendin
 
 | HomeFragment | DashboardFragment |
 | - | - |
-| screenshots/screenshot_home.png | screenshots/screenshot_dashboard.png |
+| ![HomeFragment](screenshots/screenshot_home.png) | ![DashboardFragment](screenshots/screenshot_dashboard.png) |
