@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="8dp"
+    >
+
+    <TextView
+        android:id="@+id/limits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_code_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="[ 1 - 100 ]"
+        />
+
+    <TextView
+        android:id="@+id/request_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|end"
+        android:paddingHorizontal="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_trending_up_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2"
+        />
+
+    <!-- Row 1 -->
+
+    <TextView
+        android:id="@+id/number_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|end"
+        android:minWidth="72dp"
+        android:paddingHorizontal="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_looks_one_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/limits"
+        tools:text="3"
+        />
+
+    <TextView
+        android:id="@+id/word_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        app:drawableStartCompat="@drawable/ic_baseline_label_24dp"
+        app:layout_constraintEnd_toStartOf="@id/word_one_hits"
+        app:layout_constraintStart_toEndOf="@id/number_one"
+        app:layout_constraintTop_toTopOf="@id/number_one"
+        tools:text="Fizz"
+        />
+
+    <TextView
+        android:id="@+id/word_one_hits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/number_one"
+        tools:text="33 / 100"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/indicator_word_one_hits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/word_one_hits"
+        app:layout_constraintStart_toStartOf="@id/word_one"
+        app:layout_constraintTop_toBottomOf="@id/word_one"
+        tools:max="100"
+        tools:progress="33"
+        />
+
+    <!-- Row 2 -->
+
+    <TextView
+        android:id="@+id/number_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|end"
+        android:minWidth="72dp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        app:drawableStartCompat="@drawable/ic_baseline_looks_two_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicator_word_one_hits"
+        tools:text="5"
+        />
+
+    <TextView
+        android:id="@+id/word_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        app:drawableStartCompat="@drawable/ic_baseline_label_24dp"
+        app:layout_constraintEnd_toStartOf="@id/word_two_hits"
+        app:layout_constraintStart_toEndOf="@id/number_two"
+        app:layout_constraintTop_toTopOf="@id/number_two"
+        tools:text="Buzz"
+        />
+
+    <TextView
+        android:id="@+id/word_two_hits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/number_two"
+        tools:text="20 / 100"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/indicator_word_two_hits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/word_two_hits"
+        app:layout_constraintStart_toStartOf="@id/word_two"
+        app:layout_constraintTop_toBottomOf="@id/word_two"
+        tools:max="100"
+        tools:progress="20"
+        />
+
+    <!-- Row both -->
+
+    <TextView
+        android:id="@+id/word_both"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        app:drawableStartCompat="@drawable/ic_baseline_label_24dp"
+        app:layout_constraintEnd_toStartOf="@id/word_two_hits"
+        app:layout_constraintStart_toEndOf="@id/number_two"
+        app:layout_constraintTop_toBottomOf="@id/indicator_word_two_hits"
+        tools:text="FizzBuzz"
+        />
+
+    <TextView
+        android:id="@+id/word_both_hits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/word_both"
+        tools:text="6 / 100"
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/indicator_word_both_hits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toEndOf="@id/word_both_hits"
+        app:layout_constraintStart_toStartOf="@id/word_both"
+        app:layout_constraintTop_toBottomOf="@id/word_both"
+        tools:max="100"
+        tools:progress="6"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
